@@ -1,4 +1,7 @@
 language: objective-c  #1
 osx_image: xcode8.3 #2
+before_install:
+    - gem install xcov --no-ri --no-rdoc --no-document
+    - gem update fastlane --no-ri --no-rdoc --no-document
 script:
-    - xcodebuild clean build -sdk iphonesimulator -project CITest.xcodeproj -scheme CITest CODE_SIGNING_REQUIRED=NO
+    - fastlane ios test
