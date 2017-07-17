@@ -15,7 +15,7 @@ default_platform :ios
 lane :test do
   scan(
   	clean: true,
-  	project: "CITest.xcodeproject",
+  	project: "CITest.xcodeproj",
   	scheme: "CITest",
   	sdk: "iphonesimulator",
   	destination: "name=iPhone 7"
