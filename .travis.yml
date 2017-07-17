@@ -1,5 +1,4 @@
 language: objective-c  #1
 osx_image: xcode8.3 #2
-xcode_project: CITest.xcodeproj #3
-xcode_scheme: CITest #4
-xcode_sdk: iphonesimulator10.3
+script:
+    - xcodebuild clean build -sdk iphonesimulator -project CITest.xcodeproj -scheme CITest CODE_SIGNING_REQUIRED=NO
